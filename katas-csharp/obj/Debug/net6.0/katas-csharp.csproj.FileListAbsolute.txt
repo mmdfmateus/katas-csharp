@@ -1,0 +1,15 @@
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.csproj.AssemblyReference.cache
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.AssemblyInfoInputs.cache
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.AssemblyInfo.cs
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.csproj.CoreCompileInputs.cache
+D:\ProjetosGit\katas-csharp\katas-csharp\bin\Debug\net6.0\katas-csharp.exe
+D:\ProjetosGit\katas-csharp\katas-csharp\bin\Debug\net6.0\katas-csharp.deps.json
+D:\ProjetosGit\katas-csharp\katas-csharp\bin\Debug\net6.0\katas-csharp.runtimeconfig.json
+D:\ProjetosGit\katas-csharp\katas-csharp\bin\Debug\net6.0\katas-csharp.dll
+D:\ProjetosGit\katas-csharp\katas-csharp\bin\Debug\net6.0\ref\katas-csharp.dll
+D:\ProjetosGit\katas-csharp\katas-csharp\bin\Debug\net6.0\katas-csharp.pdb
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.dll
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\ref\katas-csharp.dll
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.pdb
+D:\ProjetosGit\katas-csharp\katas-csharp\obj\Debug\net6.0\katas-csharp.genruntimeconfig.cache

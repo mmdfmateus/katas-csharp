@@ -1,0 +1,172 @@
+TpTrace Verbose: 0 : 13376, 1, 2022/02/14, 09:23:58.552, 10179003105, testhost.dll, Version: 16.11.0
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.558, 10179013227, testhost.dll, DefaultEngineInvoker.Invoke: Testhost process started with args :[--port, 64590],[--endpoint, 127.0.0.1:064590],[--role, client],[--parentprocessid, 18888],[--diag, D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\coverage-tool-output\diagnostics.host.22-02-14_09-23-58_43302_5.log],[--tracelevel, 4],[--datacollectionport, 64589],[--telemetryoptedin, false]
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.559, 10179015702, testhost.dll, Setting up debug trace listener.
+TpTrace Verbose: 0 : 13376, 1, 2022/02/14, 09:23:58.559, 10179016622, testhost.dll, TestPlatformTraceListener.Setup: Replacing listener 0 with TestHostTraceListener.
+TpTrace Verbose: 0 : 13376, 1, 2022/02/14, 09:23:58.560, 10179017045, testhost.dll, TestPlatformTraceListener.Setup: Added test platform trace listener.
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.561, 10179019251, testhost.dll, DefaultEngineInvoker.SetParentProcessExitCallback: Monitoring parent process with id: '18888'
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.568, 10179033585, testhost.dll, DefaultEngineInvoker.GetConnectionInfo: Initialize communication on endpoint address: '127.0.0.1:064590'
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.577, 10179050692, testhost.dll, SocketClient.Start: connecting to server endpoint: 127.0.0.1:064590
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.584, 10179064809, testhost.dll, DefaultEngineInvoker.ConnectToDatacollector: Connecting to datacollector, port: 64589
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:58.585, 10179067053, testhost.dll, SocketClient.OnServerConnected: connected to server endpoint: 127.0.0.1:064590
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.587, 10179070513, testhost.dll, Connected to server, and starting MessageLoopAsync
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.588, 10179072349, testhost.dll, Trying to connect to server on socket : 127.0.0.1:64589 
+TpTrace Verbose: 0 : 13376, 1, 2022/02/14, 09:23:58.588, 10179073155, testhost.dll, SocketCommunicationManager : SetupClientAsync : Attempting to connect to the server.
+TpTrace Information: 0 : 13376, 9, 2022/02/14, 09:23:58.590, 10179075704, testhost.dll, Connected to the server successfully 
+TpTrace Information: 0 : 13376, 9, 2022/02/14, 09:23:58.590, 10179076171, testhost.dll, Using the buffer size of 16384 bytes
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.590, 10179076594, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:58.591, 10179077279, testhost.dll, DefaultEngineInvoker.Invoke: Start Request Processing.
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.591, 10179077723, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Information: 0 : 13376, 12, 2022/02/14, 09:23:58.591, 10179078955, testhost.dll, DefaultEngineInvoker.StartProcessingAsync: Connected to vstest.console, Starting process requests.
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:58.687, 10179264999, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (ProtocolVersion) -> 5
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.710, 10179308752, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"Logging TestHost Diagnostics in file: D:\\ProjetosGit\\katas-csharp\\katas-csharp.Tests\\bin\\Debug\\net6.0\\fine-code-coverage\\coverage-tool-output\\diagnostics.host.22-02-14_09-23-58_43302_5.log"}}
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.710, 10179309348, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.710, 10179309843, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:58.714, 10179316475, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (TestExecution.Initialize) -> [
+  "D:\\ProjetosGit\\katas-csharp\\katas-csharp.Tests\\bin\\Debug\\net6.0\\fine-code-coverage\\build-output\\xunit.runner.visualstudio.dotnetcore.testadapter.dll"
+]
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.719, 10179326972, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.719, 10179327404, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.719, 10179327706, testhost.dll, TestRequestHandler.OnMessageReceived: Running job 'TestExecution.Initialize'.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.721, 10179331156, testhost.dll, TestExecutorService: Loading the extensions
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:58.721, 10179331804, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (TestExecution.StartWithSources) -> {
+  "AdapterSourceMap": {
+    "_none_": [
+      "D:\\ProjetosGit\\katas-csharp\\katas-csharp.Tests\\bin\\Debug\\net6.0\\fine-code-coverage\\build-output\\katas-csharp.Tests.dll"
+    ]
+  },
+  "RunSettings": "<RunSettings>\r\n  <RunConfiguration>\r\n    <ResultsDirectory>D:\\ProjetosGit\\katas-csharp\\katas-csharp.Tests\\bin\\Debug\\net6.0\\fine-code-coverage\\coverage-tool-output</ResultsDirectory>\r\n    <TargetPlatform>X64</TargetPlatform>\r\n    <TargetFrameworkVersion>.NETCoreApp,Version=v6.0</TargetFrameworkVersion>\r\n    <DesignMode>False</DesignMode>\r\n    <CollectSourceInformation>False</CollectSourceInformation>\r\n  </RunConfiguration>\r\n  <LoggerRunSettings>\r\n    <Loggers>\r\n      <Logger friendlyName=\"blame\" enabled=\"True\" />\r\n      <Logger friendlyName=\"Console\" uri=\"logger://microsoft/TestPlatform/ConsoleLogger/v1\" assemblyQualifiedName=\"Microsoft.VisualStudio.TestPlatform.CommandLine.Internal.ConsoleLogger, vstest.console, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a\" codeBase=\"C:\\Program Files\\dotnet\\sdk\\6.0.100\\vstest.console.dll\" enabled=\"True\" />\r\n    </Loggers>\r\n  </LoggerRunSettings>\r\n  <DataCollectionRunSettings>\r\n    <DataCollectors>\r\n      <DataCollector friendlyName=\"blame\" enabled=\"True\">\r\n        <Configuration>\r\n          <ResultsDirectory>D:\\ProjetosGit\\katas-csharp\\katas-csharp.Tests\\bin\\Debug\\net6.0\\fine-code-coverage\\coverage-tool-output</ResultsDirectory>\r\n        </Configuration>\r\n      </DataCollector>\r\n    </DataCollectors>\r\n  </DataCollectionRunSettings>\r\n</RunSettings>",
+  "TestExecutionContext": {
+    "FrequencyOfRunStatsChangeEvent": 10,
+    "RunStatsChangeEventTimeout": "00:00:01.5000000",
+    "InIsolation": false,
+    "KeepAlive": false,
+    "AreTestCaseLevelEventsRequired": false,
+    "IsDebug": false,
+    "TestCaseFilter": null,
+    "FilterOptions": null
+  },
+  "Package": null
+}
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.723, 10179334296, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestExecutorPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestExecutor
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.724, 10179336219, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.724, 10179337163, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.724, 10179337587, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.726, 10179340318, testhost.dll, AssemblyResolver.ctor: Creating AssemblyResolver with searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.727, 10179343064, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.727, 10179343598, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.728, 10179343958, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.728, 10179344315, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.728, 10179344710, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.729, 10179346362, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.733, 10179353392, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.visualstudio.dotnetcore.testadapter: Resolving assembly.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.733, 10179353811, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.visualstudio.dotnetcore.testadapter: Searching in: 'D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.734, 10179355946, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.visualstudio.dotnetcore.testadapter: Loading assembly 'D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll'.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.735, 10179357260, testhost.dll, AssemblyResolver.OnResolve: Resolved assembly: xunit.runner.visualstudio.dotnetcore.testadapter, from path: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.737, 10179362613, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.utility.netcoreapp10: Resolving assembly.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.737, 10179363037, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.utility.netcoreapp10: Searching in: 'D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.738, 10179363808, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.utility.netcoreapp10: Loading assembly 'D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.utility.netcoreapp10.dll'.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.738, 10179364968, testhost.dll, AssemblyResolver.OnResolve: Resolved assembly: xunit.runner.utility.netcoreapp10, from path: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.utility.netcoreapp10.dll
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:58.742, 10179371256, testhost.dll, TcpClientExtensions.MessageLoopAsync: Polling on remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.743, 10179373241, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.743, 10179374331, testhost.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.743, 10179374728, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.744, 10179375070, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.744, 10179375405, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.744, 10179375751, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.746, 10179380210, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestExecutorPluginInformation2 TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestExecutor2
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.747, 10179380822, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.747, 10179381136, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.747, 10179381449, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.747, 10179382078, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.747, 10179382414, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.748, 10179382777, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.748, 10179383075, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.748, 10179383372, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.748, 10179383665, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.748, 10179383970, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.749, 10179384926, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.749, 10179385265, testhost.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.749, 10179385577, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.749, 10179386003, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.749, 10179386318, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.750, 10179386617, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.753, 10179393767, testhost.dll, TestPluginManager.CreateTestExtension: Attempting to load test extension: Xunit.Runner.VisualStudio.VsTestRunner
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.754, 10179394210, testhost.dll, TestExecutorExtensionManager: Loading executor Xunit.Runner.VisualStudio.VsTestRunner
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.754, 10179394531, testhost.dll, TestExecutorService: Loaded the executors
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.754, 10179396035, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestSettingsProviderPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ISettingsProvider
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.755, 10179396415, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.755, 10179396720, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.755, 10179397049, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.755, 10179397479, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.755, 10179397787, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.755, 10179398090, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.756, 10179398390, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.756, 10179398679, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.756, 10179399033, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.756, 10179399370, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.756, 10179399966, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.757, 10179400274, testhost.dll, TestPluginCache: Discoverers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.757, 10179400572, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.757, 10179400860, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.757, 10179401271, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.757, 10179401565, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.758, 10179403164, testhost.dll, TestExecutorService: Loaded the settings providers
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.758, 10179403555, testhost.dll, TestExecutorService: Loaded the extensions
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.759, 10179404503, testhost.dll, TestRequestHandler.OnMessageReceived: Running job 'TestExecution.StartWithSources'.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.817, 10179518678, testhost.dll, TestDiscoveryManager: Discovering tests from sources D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\katas-csharp.Tests.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.820, 10179523928, testhost.dll, TestPluginCache.DiscoverTestExtensions: finding test extensions in assemblies ends with: TestAdapter.dll TPluginInfo: Microsoft.VisualStudio.TestPlatform.Common.ExtensionFramework.Utilities.TestDiscovererPluginInformation TExtension: Microsoft.VisualStudio.TestPlatform.ObjectModel.Adapter.ITestDiscoverer
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.820, 10179524405, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.821, 10179524781, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.821, 10179525073, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.821, 10179525602, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.821, 10179525927, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using extension path.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.821, 10179526227, testhost.dll, TestPluginCache.GetExtensionPaths: Filtered extension paths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.822, 10179526519, testhost.dll, TestPluginCache.GetExtensionPaths: Added default extension paths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.822, 10179526804, testhost.dll, TestPluginCache.GetExtensionPaths: Added unfilterableExtensionPaths: 
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.822, 10179527135, testhost.dll, TestPluginCache.DiscoverTestExtensions: Discovering the extensions using allExtensionPaths: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.822, 10179527561, testhost.dll, AssemblyResolver.AddSearchDirectories: Adding more searchDirectories D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.824, 10179531340, testhost.dll, TestPluginCache: Discovered the extensions using extension path ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.824, 10179531767, testhost.dll, TestPluginCache: Discoverers are 'Xunit.Runner.VisualStudio.VsTestRunner, xunit.runner.visualstudio.dotnetcore.testadapter, Version=2.4.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c'.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.824, 10179532065, testhost.dll, TestPluginCache: Executors are 'executor://xunit/VsTestRunner2/netcoreapp'.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.825, 10179532409, testhost.dll, TestPluginCache: Executors2 are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.825, 10179532729, testhost.dll, TestPluginCache: Setting providers are ''.
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.825, 10179533013, testhost.dll, TestPluginCache: Loggers are ''.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.833, 10179548571, testhost.dll, PEReaderHelper.GetAssemblyType: Determined assemblyType:'Managed' for source: 'D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\katas-csharp.Tests.dll'
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.839, 10179560723, testhost.dll, BaseRunTests.RunTestInternalWithExecutors: Running tests for executor://xunit/VsTestRunner2/netcoreapp
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:58.847, 10179576688, testhost.dll, [xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.0-rtm.21522.10)
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:58.848, 10179577269, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 6.0.0-rtm.21522.10)"}}
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.308, 10180472996, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.reporters.netcoreapp10: Resolving assembly.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.308, 10180473521, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.reporters.netcoreapp10: Searching in: 'D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output'.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.309, 10180474261, testhost.dll, AssemblyResolver.OnResolve: xunit.runner.reporters.netcoreapp10: Loading assembly 'D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.reporters.netcoreapp10.dll'.
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.309, 10180475358, testhost.dll, AssemblyResolver.OnResolve: Resolved assembly: xunit.runner.reporters.netcoreapp10, from path: D:\ProjetosGit\katas-csharp\katas-csharp.Tests\bin\Debug\net6.0\fine-code-coverage\build-output\xunit.runner.reporters.netcoreapp10.dll
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.368, 10180589115, testhost.dll, [xUnit.net 00:00:00.52]   Discovering: katas-csharp.Tests
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:59.368, 10180589877, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.52]   Discovering: katas-csharp.Tests"}}
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.398, 10180648517, testhost.dll, [xUnit.net 00:00:00.55]   Discovered:  katas-csharp.Tests
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:59.399, 10180649150, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.55]   Discovered:  katas-csharp.Tests"}}
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.401, 10180653036, testhost.dll, [xUnit.net 00:00:00.56]   Starting:    katas-csharp.Tests
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:59.401, 10180653435, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.56]   Starting:    katas-csharp.Tests"}}
+TpTrace Verbose: 0 : 13376, 16, 2022/02/14, 09:23:59.437, 10180724262, testhost.dll, TestExecutionRecorder.RecordStart: Starting test: katas_csharp.Tests._02KarateChop.ChopTests.ShouldReturnMinus1IfIsNotInTheArray.
+TpTrace Verbose: 0 : 13376, 16, 2022/02/14, 09:23:59.458, 10180765020, testhost.dll, TestExecutionRecorder.RecordResult: Received result for test: katas_csharp.Tests._02KarateChop.ChopTests.ShouldReturnMinus1IfIsNotInTheArray.
+TpTrace Verbose: 0 : 13376, 16, 2022/02/14, 09:23:59.472, 10180792780, testhost.dll, TestExecutionRecorder.RecordEnd: test: katas_csharp.Tests._02KarateChop.ChopTests.ShouldReturnMinus1IfIsNotInTheArray execution completed.
+TpTrace Warning: 0 : 13376, 16, 2022/02/14, 09:23:59.473, 10180793284, testhost.dll, TestRunCache: InProgressTests is null
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.474, 10180795708, testhost.dll, [xUnit.net 00:00:00.63]   Finished:    katas-csharp.Tests
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:59.474, 10180796626, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestSession.Message","Payload":{"MessageLevel":0,"Message":"[xUnit.net 00:00:00.63]   Finished:    katas-csharp.Tests"}}
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:59.478, 10180803969, testhost.dll, BaseRunTests.RunTestInternalWithExecutors: Completed running tests for executor://xunit/VsTestRunner2/netcoreapp
+TpTrace Information: 0 : 13376, 4, 2022/02/14, 09:23:59.481, 10180810253, testhost.dll, Sending test run complete
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:59.507, 10180860578, testhost.dll, TestRequestHandler.SendData:  sending data from testhost: {"Version":5,"MessageType":"TestExecution.Completed","Payload":{"TestRunCompleteArgs":{"TestRunStatistics":{"ExecutedTests":1,"Stats":{"Passed":1}},"IsCanceled":false,"IsAborted":false,"Error":null,"AttachmentSets":[],"ElapsedTimeInRunningTests":"00:00:00.6438848","Metrics":{}},"LastRunTests":{"NewTestResults":[{"TestCase":{"Id":"f43eb258-a94e-3ce5-6d16-3fd11c1d0b4c","FullyQualifiedName":"katas_csharp.Tests._02KarateChop.ChopTests.ShouldReturnMinus1IfIsNotInTheArray","DisplayName":"katas_csharp.Tests._02KarateChop.ChopTests.ShouldReturnMinus1IfIsNotInTheArray","ExecutorUri":"executor://xunit/VsTestRunner2/netcoreapp","Source":"D:\\ProjetosGit\\katas-csharp\\katas-csharp.Tests\\bin\\Debug\\net6.0\\fine-code-coverage\\build-output\\katas-csharp.Tests.dll","CodeFilePath":null,"LineNumber":0,"Properties":[]},"Attachments":[],"Outcome":1,"ErrorMessage":null,"ErrorStackTrace":null,"DisplayName":"katas_csharp.Tests._02KarateChop.ChopTests.ShouldReturnMinus1IfIsNotInTheArray","Messages":[],"ComputerName":"NOTE-MC74","Duration":"00:00:00.0070743","StartTime":"2022-02-14T12:23:59.4583366+00:00","EndTime":"2022-02-14T12:23:59.4583567+00:00","Properties":[]}],"TestRunStatistics":{"ExecutedTests":1,"Stats":{"Passed":1}},"ActiveTests":[]},"RunAttachments":[],"ExecutorUris":["executor://xunit/VsTestRunner2/netcoreapp"]}}
+TpTrace Verbose: 0 : 13376, 4, 2022/02/14, 09:23:59.508, 10180861394, testhost.dll, BaseRunTests.RunTests: Run is complete.
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:59.510, 10180865957, testhost.dll, TcpClientExtensions.MessageLoopAsync: NotifyDataAvailable remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:59.510, 10180866603, testhost.dll, TestRequestHandler.OnMessageReceived: received message: (TestSession.Terminate) -> null
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:59.511, 10180866998, testhost.dll, Session End message received from server. Closing the connection.
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:59.511, 10180867800, testhost.dll, SocketClient.Stop: Stop communication from server endpoint: 127.0.0.1:064590
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:59.511, 10180868142, testhost.dll, SocketClient: Stop: Cancellation requested. Stopping message loop.
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:59.511, 10180868571, testhost.dll, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:59.512, 10180869054, testhost.dll, Closing the connection !
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:59.512, 10180869425, testhost.dll, Closing the connection !
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:59.512, 10180869978, testhost.dll, SocketClient.Stop: Stop communication from server endpoint: 127.0.0.1:064590
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:59.512, 10180870298, testhost.dll, SocketClient: Stop: Cancellation requested. Stopping message loop.
+TpTrace Verbose: 0 : 13376, 1, 2022/02/14, 09:23:59.512, 10180870690, testhost.dll, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Information: 0 : 13376, 10, 2022/02/14, 09:23:59.513, 10180870995, testhost.dll, SocketClient.PrivateStop: Stop communication from server endpoint: 127.0.0.1:064590, error:
+TpTrace Information: 0 : 13376, 1, 2022/02/14, 09:23:59.513, 10180871124, testhost.dll, Testhost process exiting.
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:59.513, 10180871586, testhost.dll, LengthPrefixCommunicationChannel.Dispose: Dispose reader and writer.
+TpTrace Verbose: 0 : 13376, 10, 2022/02/14, 09:23:59.513, 10180872333, testhost.dll, TcpClientExtensions.MessageLoopAsync: exiting MessageLoopAsync remoteEndPoint: [::ffff:127.0.0.1]:64590 localEndPoint: [::ffff:127.0.0.1]:64591

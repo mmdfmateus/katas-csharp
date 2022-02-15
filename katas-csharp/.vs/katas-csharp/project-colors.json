@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6ed87b00-1397-4d4e-b4fe-75419efefff1": {
+      "ProjectGuid": "6ed87b00-1397-4d4e-b4fe-75419efefff1",
+      "DisplayName": "katas-csharp",
+      "ColorIndex": 0
+    },
+    "39bbfc68-da3f-4498-8e5a-1ed99cede17a": {
+      "ProjectGuid": "39bbfc68-da3f-4498-8e5a-1ed99cede17a",
+      "DisplayName": "katas-csharp.Tests",
+      "ColorIndex": 1
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 2
+}

@@ -15,6 +15,16 @@ namespace katas_csharp.Tests._02KarateChop
         }
 
         [Fact]
+        public void ShouldReturnMinus1IfTheArrayIsEmpty()
+        {
+            var target = 10;
+            var sortedArray = Array.Empty<int>();
+            var result = _sut.Run(target, sortedArray);
+
+            result.ShouldBe(-1);
+        }
+
+        [Fact]
         public void ShouldReturnMinus1IfIsNotInTheArray()
         {
             var target = 10;

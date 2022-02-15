@@ -666,7 +666,13 @@ a.percentagebar { padding-left: 6px }
 
 				<style id="fccStyle1" type="text/css">
 
-					*, body { font-size: small;  color: rgba(189,189,189,255)}
+					*, body { font-family:Segoe UI;font-size: 12px; color: rgba(189,189,189,255)}
+
+					button { cursor:pointer; padding:10px; color: rgba(189,189,189,255); background:rgba(53,57,65,255); border-color:rgba(53,57,65,255)}
+
+					button:hover { color : rgba(189,189,189,255); background:rgba(53,57,65,255); border-color:rgba(206,206,206,255)}
+
+					button:active { color : rgba(189,189,189,255); background:rgba(62,66,73,255); border-color:rgba(62,66,73,255)}
 
 					table td { white-space: nowrap; }
 
@@ -674,15 +680,15 @@ a.percentagebar { padding-left: 6px }
 
 					body { padding-left:3px;padding-right:3px;padding-bottom:3px }
 
-					table,tr,th,td { font-size: small; }
+					
 
 					body { -webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none }
 
-					table.overview th, table.overview td { font-size: small; white-space: nowrap; word-break: normal; padding-left:10px;padding-right:10px; }
+					table.overview th, table.overview td { white-space: nowrap; word-break: normal; padding-left:10px;padding-right:10px; }
 
 					
 
-					table,tr,th,td { border: 1px solid; font-size: small; }
+					table,tr,th,td { border: 1px solid;}
 
 					input[type=text] { color:rgba(189,189,189,255); background-color:rgba(40,44,52,255);border-color:rgba(62,66,73,255) }
 
@@ -817,6 +823,8 @@ a.percentagebar { padding-left: 6px }
 							{ button: 'btnSummary', content: 'table-fixed' },
 
 							{ button: 'btnRiskHotspots', content: 'risk-hotspots' },
+
+							{ button: 'btnCoverageLog', content: 'coverage-log' },
 
 						];
 
@@ -1014,11 +1022,143 @@ a.percentagebar { padding-left: 6px }
 
 						window.addEventListener('load', function() {
 
+							addCoverageLogElements();
+
 							openTab(0);
 
 						});
 
-					
+
+
+						var previousLogMessages = ['Coverage collected when tests finish. RunInParallel option true for immediate','Starting coverage - full details in FCC Output Pane','File synchronization 5 items, duration : 00:00:00.1219984','Starting Coverlet coverage for katas-csharp.Tests','Completed coverage for katas-csharp.Tests : 00:00:07.2868131','Generating cobertura report','Cobertura report generation duration - 00:00:01.5234749','Generating html report','Html report generation duration - 00:00:01.2636426']
+
+						var coverageLogElement;
+
+
+
+						function clearFCCWindowLogs(){
+
+							coverageLogElement.textContent = '';
+
+							window.external.ClearFCCWindowLogs();
+
+						}
+
+	
+
+						function addCoverageLogElements(){
+
+							var container = document.getElementsByClassName('container')[0];
+
+							var coverageLogContainer = document.createElement('div');
+
+							
+
+							coverageLogContainer.className = 'coverage-log';
+
+							var clearFCCWindowLogsButton = document.createElement('button');
+
+							clearFCCWindowLogsButton.textContent = 'Clear';
+
+							clearFCCWindowLogsButton.onclick = clearFCCWindowLogs;
+
+							coverageLogContainer.appendChild(clearFCCWindowLogsButton);
+
+                            coverageLogElement = document.createElement('div');
+
+							coverageLogElement.style.marginTop = '25px';
+
+							for(var i =0 ; i< previousLogMessages.length;i++){
+
+								addLogMessageElement(previousLogMessages[i]);
+
+							}
+
+							coverageLogContainer.appendChild(coverageLogElement);
+
+							container.appendChild(coverageLogContainer);
+
+						}
+
+						function addLogMessageElement(message){
+
+							var logElement = document.createElement('div');
+
+							var fccOutputPanePart = 'FCC Output Pane';
+
+							var fccOutputPaneStartIndex = message.indexOf(fccOutputPanePart);
+
+							if(fccOutputPaneStartIndex != -1){
+
+								if(fccOutputPaneStartIndex != 0){
+
+									var before = message.substring(0,fccOutputPaneStartIndex);
+
+									var beforeEl = document.createElement('span');
+
+									beforeEl.innerText = before;
+
+									logElement.appendChild(beforeEl);
+
+								}
+
+								var openFccPanelLink = document.createElement('a');
+
+								openFccPanelLink.innerText = fccOutputPanePart;
+
+								openFccPanelLink.href = '#';
+
+								openFccPanelLink.onclick = function(){
+
+									window.external.ShowFCCOutputPane();
+
+									return false; 
+
+								}
+
+								logElement.appendChild(openFccPanelLink);
+
+								var after = message.substring(fccOutputPaneStartIndex + fccOutputPanePart.length);
+
+								if(after != ''){
+
+									var afterEl = document.createElement('span');
+
+									afterEl.innerText = after;
+
+									logElement.appendChild(afterEl);
+
+								}
+
+							}else{
+
+								logElement.innerText = message;
+
+							}
+
+							
+
+							coverageLogElement.insertBefore(logElement, coverageLogElement.firstChild);
+
+						}
+
+						function showFCCWorking(isWorking){
+
+							var coverageLogTab = document.getElementById('btnCoverageLog');
+
+							coverageLogTab.innerText = isWorking ? 'Coverage Log *' : 'Coverage Log';
+
+						}
+
+
+
+						function coverageLog(message){
+
+							showFCCWorking(true);
+
+							addLogMessageElement(message);
+
+						}
 
 					</script>
 
@@ -1050,6 +1190,12 @@ a.percentagebar { padding-left: 6px }
 
 								</td>
 
+								<td id='btnCoverageLog' onclick='return openTab(3);' class='tab' style='width:1%;white-space:no-wrap'>
+
+									Coverage Log
+
+								</td>
+
 								<td style='border-top:transparent;border-right:transparent;padding-top:0px' align='center'>
 
 									<a href='#' onclick='return window.external.RateAndReview();' style='margin-right:7px'>Rate & Review</a>
@@ -1070,7 +1216,7 @@ a.percentagebar { padding-left: 6px }
 
 					</div>
 
-				<div class="container" style="margin:0;padding:0;border:0"><div class="containerleft" style="margin:0;padding:0;border:0">
+				<div class="container" style="margin:0;padding:25px;border:0"><div class="containerleft" style="margin:0;padding:0;border:0">
 
 <h1 style="display:none">Summary<a class="button" href="https://github.com/danielpalme/ReportGenerator" title="Star on GitHub"><i class="icon-star"></i>Star</a><a class="button" href="https://github.com/sponsors/danielpalme" title="Become a sponsor"><i class="icon-sponsor"></i>Sponsor</a></h1>
 
@@ -1086,7 +1232,7 @@ a.percentagebar { padding-left: 6px }
 
 <tbody>
 
-<tr style="display:none"><th>Generated on:</th><td>14/02/2022 - 09:24:00</td></tr>
+<tr style="display:none"><th>Generated on:</th><td>15/02/2022 - 08:10:19</td></tr>
 
 <tr style="display:none"><th>Parser:</th><td>CoberturaParser</td></tr>
 
@@ -1096,15 +1242,15 @@ a.percentagebar { padding-left: 6px }
 
 <tr><th>Files:</th><td>4</td></tr>
 
-<tr><th>Covered lines:</th><td>13</td></tr>
+<tr><th>Covered lines:</th><td>19</td></tr>
 
 <tr><th>Uncovered lines:</th><td>2</td></tr>
 
-<tr><th>Coverable lines:</th><td>15</td></tr>
+<tr><th>Coverable lines:</th><td>21</td></tr>
 
-<tr><th>Total lines:</th><td>42</td></tr>
+<tr><th>Total lines:</th><td>52</td></tr>
 
-<tr><th>Line coverage:</th><td>86.6% (13 of 15)</td></tr>
+<tr><th>Line coverage:</th><td>90.4% (19 of 21)</td></tr>
 
 <tr><th>Covered branches:</th><td>0</td></tr>
 
@@ -1164,11 +1310,11 @@ a.percentagebar { padding-left: 6px }
 
 <tr><td><a href="katas_csharp_Program.html">Program</a></td><td class="right">0</td><td class="right">1</td><td class="right">1</td><td class="right">1</td><td title="LineCoverage: 0/1" class="right">0%</td><td><table class="coverage"><tr><td class="red covered100">&nbsp;</td></tr></table></td><td class="right">0</td><td class="right">0</td><td class="right" title="-"></td><td><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></td></tr>
 
-<tr><th>katas-csharp.Tests</th><th class="right">10</th><th class="right">1</th><th class="right">11</th><th class="right">31</th><th title="LineCoverage: 10/11" class="right">90.9%</th><th><table class="coverage"><tr><td class="green covered91">&nbsp;</td><td class="red covered9">&nbsp;</td></tr></table></th><th class="right">0</th><th class="right">0</th><th class="right" title="-"></th><th><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></th></tr>
+<tr><th>katas-csharp.Tests</th><th class="right">16</th><th class="right">1</th><th class="right">17</th><th class="right">41</th><th title="LineCoverage: 16/17" class="right">94.1%</th><th><table class="coverage"><tr><td class="green covered94">&nbsp;</td><td class="red covered6">&nbsp;</td></tr></table></th><th class="right">0</th><th class="right">0</th><th class="right" title="-"></th><th><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></th></tr>
 
 <tr><td><a href="katas_csharp.Tests_AutoGeneratedProgram.html">AutoGeneratedProgram</a></td><td class="right">0</td><td class="right">1</td><td class="right">1</td><td class="right">4</td><td title="LineCoverage: 0/1" class="right">0%</td><td><table class="coverage"><tr><td class="red covered100">&nbsp;</td></tr></table></td><td class="right">0</td><td class="right">0</td><td class="right" title="-"></td><td><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></td></tr>
 
-<tr><td><a href="katas_csharp.Tests_ChopTests.html">katas_csharp.Tests._02KarateChop.ChopTests</a></td><td class="right">10</td><td class="right">0</td><td class="right">10</td><td class="right">27</td><td title="LineCoverage: 10/10" class="right">100%</td><td><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></td><td class="right">0</td><td class="right">0</td><td class="right" title="-"></td><td><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></td></tr>
+<tr><td><a href="katas_csharp.Tests_ChopTests.html">katas_csharp.Tests._02KarateChop.ChopTests</a></td><td class="right">16</td><td class="right">0</td><td class="right">16</td><td class="right">37</td><td title="LineCoverage: 16/16" class="right">100%</td><td><table class="coverage"><tr><td class="green covered100">&nbsp;</td></tr></table></td><td class="right">0</td><td class="right">0</td><td class="right" title="-"></td><td><table class="coverage"><tr><td class="gray covered100">&nbsp;</td></tr></table></td></tr>
 
 </tbody>
 
@@ -1176,7 +1322,7 @@ a.percentagebar { padding-left: 6px }
 
 </coverage-info>
 
-<div class="footer" style="display:none">Generated by: ReportGenerator 4.7.1.0<br>14/02/2022 - 09:24:00<br><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div></div>
+<div class="footer" style="display:none">Generated by: ReportGenerator 4.7.1.0<br>15/02/2022 - 08:10:19<br><a href="https://github.com/danielpalme/ReportGenerator">GitHub</a> | <a href="http://www.palmmedia.de">www.palmmedia.de</a></div></div></div>
 
 <script type="text/javascript">/* <![CDATA[ */ /* Chartist.js 0.11.0
 
@@ -1706,13 +1852,13 @@ var assemblies = [
 
         "rp": "#katas-csharp.Tests!katas_csharp.Tests._02KarateChop.ChopTests.html",
 
-        "cl": 10,
+        "cl": 16,
 
         "ucl": 0,
 
-        "cal": 10,
+        "cal": 16,
 
-        "tl": 27,
+        "tl": 37,
 
         "ct": "LineCoverage",
 
@@ -1892,6 +2038,20 @@ function _slicedToArray(e,t){return _arrayWithHoles(e)||_iterableToArrayLimit(e,
 
 					}
 
+					function fontChanged(fontNameAndSize){
+
+						var parts = fontNameAndSize.split(':');
+
+						var fccStyleSheet1Rules = getStyleSheetById('fccStyle1').cssRules;
+
+						var generalStyle = getStyleBySelector(fccStyleSheet1Rules,'*, body');
+
+						generalStyle.setProperty('font-family',parts[0]);
+
+						generalStyle.setProperty('font-size',parts[1]);
+
+					}
+
 					function themeChanged(theme){
 
 							var fccMediaStylesheet = getStyleSheetById('fccMediaStyle');	
@@ -1906,7 +2066,33 @@ function _slicedToArray(e,t){return _arrayWithHoles(e)||_iterableToArrayLimit(e,
 
 							var fccStyleSheet1Rules = getStyleSheetById('fccStyle1').cssRules;		
 
-					
+							var buttonStyle = getStyleBySelector(fccStyleSheet1Rules,'button');
+
+							buttonStyle.setProperty('color',theme.ButtonTextColour);
+
+							buttonStyle.setProperty('background',theme.ButtonColour);
+
+							buttonStyle.setProperty('border-color',theme.ButtonBorderColour);
+
+							var buttonHoverStyle = getStyleBySelector(fccStyleSheet1Rules,'button:hover');
+
+							buttonHoverStyle.setProperty('color',theme.ButtonHoverTextColour);
+
+							buttonHoverStyle.setProperty('background',theme.ButtonHoverColour);
+
+							buttonHoverStyle.setProperty('border-color',theme.ButtonBorderHoverColour);
+
+							var buttonPressedStyle = getStyleBySelector(fccStyleSheet1Rules,'button:active');
+
+							buttonPressedStyle.setProperty('color',theme.ButtonPressedTextColour);
+
+							buttonPressedStyle.setProperty('background',theme.ButtonPressedColour);
+
+							buttonPressedStyle.setProperty('border-color',theme.ButtonBorderPressedColour);
+
+
+
+
 
 							var rangeInputFillLower = getStyleBySelector(fccStyleSheet1Rules, 'input[type=range]::-ms-fill-lower');
 
@@ -2078,7 +2264,7 @@ function _slicedToArray(e,t){return _arrayWithHoles(e)||_iterableToArrayLimit(e,
 
 
 
-						eventListener(window,'focus',function(){window.external.DocumentFocused()});
+						eventListener(window,'focus',function(){window.external.DocumentFocused});
 
 
 

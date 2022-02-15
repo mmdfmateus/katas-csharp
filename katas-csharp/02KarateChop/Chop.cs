@@ -4,7 +4,10 @@
     {
         public int Run(int target, int[] sortedArray)
         {
-            return -1;
+            if (sortedArray.Length == 0) return -1;
+            if (sortedArray[0] != target) return -1;
+
+            return sortedArray[0];
         }
     }
 }
